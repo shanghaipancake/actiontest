@@ -1,0 +1,53 @@
+Arguments: 
+  /Users/mingdao/.nvm/versions/node/v12.18.0/bin/node /Users/mingdao/.nvm/versions/node/v12.18.0/bin/yarn add async
+
+PATH: 
+  /Users/mingdao/.deno/bin:/Users/mingdao/.nvm/versions/node/v12.18.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/mingdao/.deno/bin:/Users/mingdao/.nvm/versions/node/v12.18.0/bin:/opt/local/bin:/opt/local/sbin:/Users/mingdao/Flutter/flutter/bin:/Users/mingdao/Flutter/flutter/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.18.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/async: tunneling socket could not be established, cause=Client network socket disconnected before secure TLS connection was established
+      at ClientRequest.onError (/Users/mingdao/.nvm/versions/node/v12.18.0/lib/node_modules/yarn/lib/cli.js:152235:17)
+      at Object.onceWrapper (events.js:422:26)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.socketErrorListener (_http_client.js:426:9)
+      at TLSSocket.emit (events.js:315:20)
+      at emitErrorNT (internal/streams/destroy.js:92:8)
+      at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "actiontest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/shanghaipancake/actiontest.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/shanghaipancake/actiontest/issues"
+    },
+    "homepage": "https://github.com/shanghaipancake/actiontest#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
