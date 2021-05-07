@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Run a one-line script
+      
+      - name: Run
+      run: |
         rm -rf data
         mkdir data
         node main.js
