@@ -3,7 +3,7 @@ var async = require("async");
 var got = require("got");
 
 const cookie =
-  "SUB=_2A25NlxL5DeRhGeBG61QQ8yzLyTqIHXVu5QMxrDV8PUNbmtANLRn_kW9NRj3oYRQeFZ6xwHP0udXjwMP5GPpkSmaP";
+  "SUB=_2A25NkM2qDeRhGeBG61QQ8yzLyTqIHXVu57hirDV8PUNbmtAKLVr3kW9NRj3oYYUJF384kr7Zoirs1vHNu3i-7RGu";
 async function main() {
   const res = await got(
     "https://weibo.com/ajax/statuses/mymblog?uid=5508712324&page=1&feature=1&count=10",
@@ -20,6 +20,15 @@ async function main() {
     write.on("finish", () => cb(null, url));
     got.stream(url).pipe(write);
   });
+  fs.writeFileSync(
+    "./docs/index.md",
+    ids
+      .map(
+        (id) =>
+          `![Image](https://raw.githubusercontent.com/shanghaipancake/actiontest/master/data/${id}.jpg)`
+      )
+      .join("\n")
+  );
   console.log("all over", result);
 }
 
