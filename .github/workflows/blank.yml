@@ -31,5 +31,5 @@ jobs:
           mkdir data
           node main.js
           git add .
-          git commit -a update
+          git commit -m update
           git push origin master
