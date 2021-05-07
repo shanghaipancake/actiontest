@@ -13,7 +13,7 @@ jobs:
       
       - name: Run
         run: |
-          npm ci
           rm -rf data
           mkdir data
+          npm ci
           node main.js
