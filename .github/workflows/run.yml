@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Run
-      run: |
-        rm -rf data
-        mkdir data
-        node main.js
+        run: |
+          rm -rf data
+          mkdir data
+          node main.js
