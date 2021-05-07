@@ -24,7 +24,8 @@ jobs:
       - name: Add
         run : |
           ls data
-          git status
+          cat ./docs/index.md
           git add .
+          git status
           git commit -m update
           git push origin master
