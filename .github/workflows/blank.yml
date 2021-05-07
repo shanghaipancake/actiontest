@@ -30,5 +30,6 @@ jobs:
           git config --global user.email "github-actions@users.noreply.github.com"
           mkdir data
           node main.js
-          git commit -am update
+          git add .
+          git commit -a update
           git push origin master
