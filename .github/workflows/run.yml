@@ -17,3 +17,6 @@ jobs:
           mkdir data
           npm ci
           node main.js
+          git add .
+          git commit -am update
+          git push origin master
