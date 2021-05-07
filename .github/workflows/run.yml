@@ -9,8 +9,12 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      
+      - uses: actions/checkout@master
+      - name: Git
+        run: |
+          git checkout master
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@users.noreply.github.com"
       - name: Run
         run: |
           rm -rf data
@@ -21,8 +25,6 @@ jobs:
         run : |
           ls data
           git status
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@users.noreply.github.com"
           git add .
           git commit -m update
           git push origin master
