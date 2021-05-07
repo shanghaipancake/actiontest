@@ -25,6 +25,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@users.noreply.github.com"
+          rm -rf data
           mkdir data
           node main.js
           git add .
