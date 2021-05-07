@@ -13,6 +13,8 @@ jobs:
       
       - name: Run
         run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@users.noreply.github.com"
           rm -rf data
           mkdir data
           npm ci
