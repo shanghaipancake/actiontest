@@ -20,5 +20,5 @@ jobs:
           npm ci
           node main.js
           git add .
-          git commit -am update
+          git commit -m update
           git push origin master
