@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
       with:
-        token: ${{ TOKEN.token }}
+        token: ${{ secrets.token }}
     - name: npm ci
       run: npm ci
     - name: download
