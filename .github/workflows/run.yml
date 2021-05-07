@@ -1,6 +1,7 @@
 name: DOWNLOAD
 
 on:
+  push:
   schedule:
     - cron: "*/6 * * * *"
 
