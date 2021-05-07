@@ -2,13 +2,13 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,11 +19,14 @@ jobs:
     name: lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-      with:
-        token: ${{ secrets.token }}
-    - name: npm ci
-      run: npm ci
-    - name: download
-      run: |
-        node main.js
+      - uses: actions/checkout@master
+        with:
+          token: ${{ secrets.token }}
+      - name: npm ci
+        run: npm ci
+      - name: download
+        run: |
+          mkdir data
+          node main.js
+          git commit -am update
+          git push origin master
