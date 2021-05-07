@@ -12,7 +12,10 @@ async function main() {
     }
   );
   const data = JSON.parse(res.body);
-  const ids = data.data.list.filter((w) => w.pic_ids)[0].pic_ids;
+  const ids = data.data.list
+    .filter((w) => w.pic_ids)
+    .map((a) => a.pic_ids)
+    .reduce((a, b) => a.concat(b));
   const result = await async.mapLimit(ids, 10, (id, cb) => {
     console.log("begin fetch ", id);
     const write = fs.createWriteStream(`./data/${id}.jpg`);
